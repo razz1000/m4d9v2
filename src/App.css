@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+.dark-netflix {
+  background-color: #141414;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.text-color {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.heading {
+  background-color: #141414;
+  color: white;
+  font-size: x-large;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.white {
+  color: white;
+}
+body {
+    background-color: #141414;
+    color: white
+}
+a {
+    color: white
+}
+
+nav {
+    background: #141414
+}
+
+hr {
+    background: gray;
+}
+.text-gray {
+  position: relative;
+  background-color: gray;
+  padding: 5px 20px 5px 20px;
+  width: 60%;
+}
+
+span {
+    margin-left: 20px;
+    margin-top: 3px
+}
+h1 {
+  margin-left: 305px;
+}
+h2 {
+  color: white
 }

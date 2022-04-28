@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import MyNav from "./components/MyNav";
+import HeadingNavbar from './components/HeadingNavbar'
+import MyCarousel from "./components/MyCarousel";
+import MyFooter from './components/MyFooter'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className="dark-netflix">
+      <MyNav />
+      <HeadingNavbar />
+      <MyCarousel heading="Harry Potter" movie="Harry Potter" />
+      <MyCarousel heading="James Bond" movie="James Bond" />
+      <MyCarousel heading="The Lord of the Rings" movie="The Lord of The Rings" />
+      <MyFooter />
+
     </div>
   );
 }
 
 export default App;
+
+
+
