@@ -1,14 +1,15 @@
-import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Dropdown, Nav } from "react-bootstrap";
 import netflix from "../Images/netflix_logo.png";
 import dropdown from "../Images/dropdown.png";
+import { Link } from 'react-router-dom'
 
+const MyNav = () => {
+  
 
-class MyNav extends Component {
-  render() {
     return (
-      <div>
+
+<div>
         <Navbar className="navbar navbar-expand-lg navbar-dark dark-netflix d-flex">
           <a className="navbar-brand" href="#hello">
             <img src={netflix} alt="netflix-logo" width="145" height="60" />
@@ -17,6 +18,9 @@ class MyNav extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
+            <Link to="/tv-shows">
+            <div className="navbar-brand">Tv-Shows</div>
+            </Link>
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#shows">TV Shows</Nav.Link>
               <Nav.Link href="#movies">Movies</Nav.Link>
@@ -62,7 +66,7 @@ class MyNav extends Component {
         </Navbar>
       </div>
     );
-  }
+  
 }
 
 export default MyNav;
