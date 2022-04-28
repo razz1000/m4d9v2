@@ -12,7 +12,7 @@ class CarouselRow extends Component {
 
             <div>
         <Row >
-{this.props.movies.map(movie => {return <CarouselItem movie={movie} />})}
+        {this.props.movies.map(movie => {return <CarouselItem movie={movie} />})}
 
 
       </Row>

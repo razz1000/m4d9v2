@@ -18,10 +18,25 @@ class MyCarousel extends Component {
     this.setState({activeSlide:selected})
   }
  */
+
+  componentDidUpdate = (prevProps) => {
+    if (
+      this.props.searchValue &&
+      prevProps.searchValue !== this.props.searchValue
+    ) {
+      this.fetchData()
+    }
+  }
+
+
+
   fetchData = async () => {
     try {
+      let selectedMovie = this.props.movie
+      if (this.props.searchValue && this.props.searchValue.length > 3) {
+        selectedMovie = this.props.searchValue
+      }
 
-        const selectedMovie = this.props.movie
 
       const response = await fetch(
         "http://www.omdbapi.com/?apikey=6e593066&s=" + selectedMovie

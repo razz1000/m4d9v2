@@ -1,12 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Dropdown, Nav } from "react-bootstrap";
+import { Navbar, Dropdown, Nav, Form } from "react-bootstrap";
 import netflix from "../Images/netflix_logo.png";
 import dropdown from "../Images/dropdown.png";
 import { Link } from 'react-router-dom'
+import { useState } from "react";
 
-const MyNav = () => {
+
+const MyNav = (props) => {
   
-
+  const [searchValue, setSearchValue] = useState([])
+ 
     return (
 
 <div>
@@ -27,6 +30,16 @@ const MyNav = () => {
               <Nav.Link href="#recent">Recently Added</Nav.Link>
               <Nav.Link href="#list">My List</Nav.Link>
             </Nav>
+
+            <Form.Control
+              style={{ width: '250px' }}
+              type="text"
+              placeholder="Search here"
+              onChange={(e) => props.setSearchValue(e.target.value)}
+            />
+            <Form.Text className="text-muted"></Form.Text>
+
+
 
             <ul className="navbar-nav">
               <li className="nav-item">
